@@ -1,0 +1,63 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Proyecto Final</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="container--title">Clasificación con visión artificial con Raspberry Pi</h1>
+
+        <section>
+            <form onsubmit="validarSelecciones()" method="POST" action="/controlar_banda" class="container_form">
+                <div class="container--section">
+                    <h2 class="sub-tittle__form">Selección almacenamiento 1</h2>
+                    <select name="select1" id="select1">
+                        <option value="none" selected>Seleccione</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Rojo">Rojo</option>
+                        
+                    </select>
+                </div>
+
+                <div class="container--section">
+                    <h2 class="sub-tittle__form">Selección almacenamiento 2</h2>
+                    <select name="select2" id="select2">
+                        <option value="none" selected>Seleccione</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Rojo">Rojo</option>
+                     
+                    </select>
+                </div>
+
+                <div class="container--section">
+                    <h2 class="sub-tittle__form">Selección almacenamiento 3</h2>
+                    <select name="select3" id="select3">
+                        <option value="none" selected>Seleccione</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Rojo">Rojo</option>
+                        
+                    </select>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            
+        </section>
+        <p>
+            <img src="{{ url_for('static', filename='img/banda.png') }}" alt="imagen">
+        </p>
+    </main>
+
+       
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
+
+
